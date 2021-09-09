@@ -32,7 +32,6 @@ export default function Profile() {
         <div>สวัสดีคร้าบบบบ</div>
         <div> Status: {profile.statusMessage} </div>
       </div>
-      {liff.getDecodedIDToken().email}
     </section>
   );
 }
