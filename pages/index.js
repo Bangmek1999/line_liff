@@ -28,8 +28,11 @@ export default function Profile() {
             height={500}
           />
         )}{" "}
-        <div> Name: {profile.displayName} </div>{" "}
-      </div>{" "}
+        <div> Name: {profile.displayName} </div>
+        <div>สวัสดีคร้าบบบบ</div>
+        <div> Status: {profile.statusMessage} </div>
+      </div>
+      {liff.getDecodedIDToken().email}
     </section>
   );
 }
