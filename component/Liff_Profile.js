@@ -25,6 +25,8 @@ export default function Liff_Profile() {
         )}
         <div> Name: {profile.displayName} </div>
         <div> Status: {profile.statusMessage} </div>
+        <div> id: {profile.userId} </div>
+
       </div>
     </div>
   );
