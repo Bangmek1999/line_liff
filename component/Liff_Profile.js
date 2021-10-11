@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 
 export default function Liff_Profile() {
   const [profile, setProfile] = useState({});
+  const [email, setEmail] = useState({});
 
   useEffect(async () => {
     const liff = (await import("@line/liff")).default;
     await liff.ready;
     const profile = await liff.getProfile();
+    const email = liff.getDecodedIDToken().email;
     setProfile(profile);
+    setEmail(email);
   }, [profile.userId]);
   return (
     <div className="container">
@@ -25,6 +28,9 @@ export default function Liff_Profile() {
         )}
         <div> Name: {profile.displayName} </div>
         <div> Status: {profile.statusMessage} </div>
+        <div> id: {profile.userId} </div>
+        <div> Email: {email} </div>
+
       </div>
     </div>
   );
