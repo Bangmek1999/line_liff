@@ -30,7 +30,6 @@ export default function Liff_Profile() {
         <div> Status: {profile.statusMessage} </div>
         <div> id: {profile.userId} </div>
         <div> Email: {email} </div>
-
       </div>
     </div>
   );
